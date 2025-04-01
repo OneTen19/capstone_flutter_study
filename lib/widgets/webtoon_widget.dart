@@ -45,7 +45,12 @@ class Webtoon extends StatelessWidget {
                   )
                 ],
               ),
-              child: Image.network(thumb),
+              child: Image.network(
+                thumb,
+                headers: {
+                  'Referer': 'https://comic.naver.com',
+                },
+              ),
             ),
           ),
           const SizedBox(
